@@ -17,5 +17,16 @@ namespace ClassLibrary
             DateOfIssue = dateOfIssue;
             AmountOfMonthlyLibraryFee = amountOfMonthlyLibraryFee;
         }
+
+        public override string ShowInfo()
+        {
+            string baseInfo = base.ShowInfo();
+
+            string libraryUserInfo = $"Номер читацького квитка: {LibraryCardNum}\n" +
+                $"Дата видачі: {DateOfIssue.ToShortDateString()}\n" + 
+                $"Розмір щомісячного читацького внеску: {AmountOfMonthlyLibraryFee}";
+
+            return $"{baseInfo}\n\n{libraryUserInfo}";
+        }
     }
 }

@@ -12,5 +12,10 @@
             LastName = lastName;
             BirthDate = birthDate;
         }
+
+        public virtual string ShowInfo()
+        {
+            return $"Ім'я: {FirstName}\nПрізвище: {LastName}\nДата народження: {BirthDate.ToShortDateString()}";
+        }
     }
 }

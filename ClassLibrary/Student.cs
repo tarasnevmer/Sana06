@@ -18,5 +18,17 @@ namespace ClassLibrary
             Faculty = faculty;
             EducationInstitution = educationInstitution;
         }
+
+        public override string ShowInfo()
+        {
+            string baseInfo = base.ShowInfo();
+
+            string studentInfo = $"Курс: {Course}\n" + 
+                $"Група: {Group}\n" + 
+                $"Факультет: {Faculty}\n" + 
+                $"Вищий навчальний заклад: {EducationInstitution}";
+
+            return $"{baseInfo}\n\n{studentInfo}";
+        }
     }
 }

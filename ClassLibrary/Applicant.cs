@@ -17,5 +17,15 @@ namespace ClassLibrary
             NumOfPointsEducDoc = numOfPointsEducDoc;
             NameEducInstitution = nameEducInstitution;
         }
+
+        public override string ShowInfo()
+        {
+            string baseInfo = base.ShowInfo();
+            string applicantInfo = $"Бали ЗНО: {NumOfPointsZNO}\n" +
+                $"Бали за документ про освіту: {NumOfPointsEducDoc}\n" +
+                $"Назва навчального закладу: {NameEducInstitution}";
+
+            return $"{baseInfo}\n\n{applicantInfo}";
+        }
     }
 }

@@ -17,5 +17,15 @@ namespace ClassLibrary
             Department = department;
             EducationInstitution = educationInstitution;
         }
+
+        public override string ShowInfo()
+        {
+            string baseInfo = base.ShowInfo();
+            string teacherInfo = $"Посада: {Position}\n" +
+                $"Кафедра: {Department}\n" +
+                $"Вищий навчальний заклад: {EducationInstitution}";
+
+            return $"{baseInfo}\n\n{teacherInfo}";
+        }
     }
 }
