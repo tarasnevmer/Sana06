@@ -1,12 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Xml.Linq;
+
 
 namespace ClassLibrary
 {
-    internal class Applicant
+    public class Applicant : Person
     {
+        public int NumOfPointsZNO { get; set; }
+        public int NumOfPointsEducDoc { get; set; }
+        public string NameEducInstitution { get; set; }
+
+        public Applicant (string firstName, string lastName, DateTime birthDate,
+            int numOfPointsZNO, int numOfPointsEducDoc, string nameEducInstitution) : base(firstName, lastName, birthDate)
+        {
+            NumOfPointsZNO = numOfPointsZNO;
+            NumOfPointsEducDoc = numOfPointsEducDoc;
+            NameEducInstitution = nameEducInstitution;
+        }
     }
 }
