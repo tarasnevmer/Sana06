@@ -1,12 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace ClassLibrary
 {
-    internal class LibraryUser
+    public class LibraryUser : Person
     {
+        public int LibraryCardNum { get; set; }
+        public DateTime DateOfIssue { get; set; }
+        public decimal AmountOfMonthlyLibraryFee { get; set; }
+
+        public LibraryUser(string firstName, string lastName,
+            DateTime birthDate, int libraryCardNum, DateTime dateOfIssue, 
+            decimal amountOfMonthlyLibraryFee) : base (firstName, lastName, birthDate)
+        {
+            LibraryCardNum = libraryCardNum;
+            DateOfIssue = dateOfIssue;
+            AmountOfMonthlyLibraryFee = amountOfMonthlyLibraryFee;
+        }
     }
 }
