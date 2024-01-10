@@ -15,7 +15,7 @@
 
         public virtual string ShowInfo()
         {
-            return $"Ім'я: {FirstName}\nПрізвище: {LastName}\nДата народження: {BirthDate.ToShortDateString()}";
+            return $"Ім'я: {FirstName}\nПрізвище: {LastName}\nДата народження: {BirthDate.ToShortDateString()}\n";
         }
     }
 }

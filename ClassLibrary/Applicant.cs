@@ -25,7 +25,7 @@ namespace ClassLibrary
                 $"Бали за документ про освіту: {NumOfPointsEducDoc}\n" +
                 $"Назва навчального закладу: {NameEducInstitution}";
 
-            return $"{baseInfo}\n\n{applicantInfo}";
+            return $"{baseInfo}{applicantInfo} \n";
         }
     }
 }

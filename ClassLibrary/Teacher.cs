@@ -25,7 +25,7 @@ namespace ClassLibrary
                 $"Кафедра: {Department}\n" +
                 $"Вищий навчальний заклад: {EducationInstitution}";
 
-            return $"{baseInfo}\n\n{teacherInfo}";
+            return $"{baseInfo}{teacherInfo}\n";
         }
     }
 }

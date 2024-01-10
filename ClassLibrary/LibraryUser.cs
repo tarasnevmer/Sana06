@@ -24,9 +24,9 @@ namespace ClassLibrary
 
             string libraryUserInfo = $"Номер читацького квитка: {LibraryCardNum}\n" +
                 $"Дата видачі: {DateOfIssue.ToShortDateString()}\n" + 
-                $"Розмір щомісячного читацького внеску: {AmountOfMonthlyLibraryFee}";
+                $"Розмір щомісячного читацького внеску: {AmountOfMonthlyLibraryFee} грн.";
 
-            return $"{baseInfo}\n\n{libraryUserInfo}";
+            return $"{baseInfo}{libraryUserInfo}\n";
         }
     }
 }
